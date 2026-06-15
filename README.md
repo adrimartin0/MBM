@@ -2,6 +2,8 @@
 
 Plantilla simple para practicar con Codex, GitHub y GitHub Pages.
 
+Verificacion de acceso realizada por Codex el 2026-06-16.
+
 ## Archivos
 
 - `index.html`: estructura principal.
