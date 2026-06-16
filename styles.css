@@ -161,7 +161,7 @@ h3 {
   inset: -28px;
   background:
     linear-gradient(rgba(42, 7, 21, 0.24), rgba(42, 7, 21, 0.24)),
-    url("assets/images/fachada-directa.webp") center center / cover no-repeat;
+    url("assets/images/fachada-principal.webp") center center / cover no-repeat;
   filter: blur(14px);
   opacity: 0.5;
   transform: scale(1.04);
@@ -172,8 +172,8 @@ h3 {
   top: 50%;
   right: max(24px, calc((100vw - 1180px) / 2));
   z-index: 2;
-  width: auto;
-  height: min(80svh, 800px);
+  width: min(39vw, 560px);
+  height: auto;
   max-height: calc(100% - clamp(34px, 5vw, 68px));
   object-fit: contain;
   object-position: center center;
@@ -605,6 +605,7 @@ address a:focus-visible {
 @media (max-width: 1120px) {
   .hero-image {
     right: -16px;
+    width: min(42vw, 500px);
     max-height: calc(100% - 84px);
   }
 
