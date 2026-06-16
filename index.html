@@ -3,87 +3,283 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web de muestra | Codex</title>
-  <meta name="description" content="Web de muestra creada como base para trabajar con Codex y GitHub Pages." />
+  <title>MBM Asesores</title>
+  <meta name="description" content="MBM Asesores. Estrategia y confianza para tu empresa. Asesoría fiscal, laboral, contable y jurídica." />
+  <link rel="preload" as="image" href="assets/images/fachada-principal.webp" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#">WebMuestra</a>
-      <button class="menu-button" id="menuButton" aria-label="Abrir menú">☰</button>
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="MBM Asesores">
+        <span>MBM</span>
+        <strong>ASESORES</strong>
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="nav-links" id="navLinks">
-        <a href="#inicio">Inicio</a>
-        <a href="#funciones">Funciones</a>
-        <a href="#ejemplo">Ejemplo</a>
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#propuesta">Propuesta de valor</a>
+        <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="inicio">
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <img
+        class="hero-image"
+        src="assets/images/fachada-principal.webp"
+        width="1448"
+        height="1086"
+        alt="Fachada de MBM Asesores"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">Proyecto de prueba</p>
-        <h1>Una web sencilla, moderna y lista para mejorar con Codex.</h1>
-        <p class="hero-text">
-          Esta plantilla sirve como base para practicar desarrollo web, trabajar con GitHub y publicar con GitHub Pages.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#funciones">Ver funciones</a>
-          <a class="button secondary" href="#contacto">Empezar</a>
+        <p class="eyebrow">Para PYMES y Autónomos</p>
+        <h1 id="hero-title"><span>MBM</span> <span>ASESORES</span></h1>
+        <p class="hero-subtitle">ESTRATEGIA Y CONFIANZA PARA TU EMPRESA</p>
+        <div class="hero-actions" aria-label="Accesos principales">
+          <a class="button button-primary" href="#propuesta">Propuesta de Valor</a>
+          <a class="button button-secondary" href="#contacto">Contacto</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="funciones">
-      <div class="section-heading">
-        <p class="eyebrow">Características</p>
-        <h2>Base limpia para un proyecto real</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Responsive</h3>
-          <p>Se adapta a móvil, tablet y ordenador sin frameworks externos.</p>
-        </article>
-        <article class="card">
-          <h3>Simple</h3>
-          <p>HTML, CSS y JavaScript separados para que Codex pueda editar con claridad.</p>
-        </article>
-        <article class="card">
-          <h3>Publicable</h3>
-          <p>Preparada para subirse a GitHub y publicarse mediante GitHub Pages.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section split" id="ejemplo">
-      <div>
-        <p class="eyebrow">Contenido</p>
-        <h2>Sección de ejemplo</h2>
-        <p>
-          Aquí puedes explicar el objetivo de la web, mostrar un producto, una idea, una marca personal
-          o una demo de un futuro proyecto más grande.
-        </p>
-      </div>
-      <div class="highlight-box">
-        <strong>Objetivo:</strong>
-        <p>Usar esta web como campo de pruebas para aprender flujo real: repositorio, cambios, revisión y despliegue.</p>
+    <section class="section intro-section deferred-section" id="quienes-somos" aria-labelledby="quienes-title">
+      <div class="section-inner split-layout">
+        <div class="copy-block reveal">
+          <p class="section-kicker">Quiénes somos</p>
+          <h2 id="quienes-title">MBM Asesores cuenta con más de dos décadas de experiencia</h2>
+          <div class="rich-text">
+            <p>
+              MBM Asesores cuenta con más de dos décadas de experiencia ofreciendo soluciones integrales en asesoría fiscal, laboral, contable y jurídica. Nuestra misión es acompañar a empresas y particulares en cada etapa de su desarrollo, garantizando un servicio cercano, profesional y adaptado a sus necesidades específicas.
+            </p>
+            <p>
+              Nos distingue nuestro compromiso inquebrantable con la calidad y la atención personalizada. Cada cliente es único, y por ello dedicamos tiempo a comprender sus objetivos para ofrecer las mejores soluciones.
+            </p>
+          </div>
+        </div>
+        <div class="image-panel reveal">
+          <img
+            class="deferred-image"
+            src="assets/images/pasillo-oficinas.webp"
+            width="1050"
+            height="1400"
+            alt="Interior de MBM Asesores"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       </div>
     </section>
 
-    <section class="cta" id="contacto">
-      <h2>Lista para evolucionar</h2>
-      <p>Pídele mañana a Codex que mejore diseño, añada secciones o convierta esto en una landing completa.</p>
-      <a class="button primary" href="mailto:tuemail@example.com">Contacto</a>
+    <section class="section pillars-section deferred-section" aria-labelledby="valores-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <p class="section-kicker">PROFESIONALIDAD CONFIANZA CERCANÍA</p>
+          <h2 id="valores-title">Compromiso absoluto con la excelencia en cada servicio</h2>
+        </div>
+
+        <div class="pillar-grid">
+          <article class="pillar-card reveal">
+            <h3>PROFESIONALIDAD</h3>
+            <p>
+              Compromiso absoluto con la excelencia en cada servicio. Equipo altamente cualificado con formación continua y actualización constante en normativa vigente.
+            </p>
+          </article>
+
+          <article class="pillar-card reveal">
+            <h3>CONFIANZA</h3>
+            <p>
+              Transparencia total en nuestra gestión. Comunicación clara y honesta con cada cliente, construyendo relaciones duraderas basadas en la integridad.
+            </p>
+          </article>
+
+          <article class="pillar-card reveal">
+            <h3>CERCANÍA</h3>
+            <p>
+              Atención personalizada y adaptada a las necesidades específicas de cada cliente. Trato directo y accesible para resolver cualquier consulta con rapidez.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-band deferred-section" aria-label="MBM Asesores">
+      <img
+        class="deferred-image reveal"
+        src="assets/images/recepcion.webp"
+        width="1448"
+        height="1086"
+        alt="Recepcion de MBM Asesores"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="deferred-image reveal"
+        src="assets/images/fachada-exterior.webp"
+        width="1448"
+        height="1086"
+        alt="Exterior de MBM Asesores"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <section class="section value-section deferred-section" id="propuesta" aria-labelledby="valor-title">
+      <div class="section-inner value-layout">
+        <div class="copy-block reveal">
+          <p class="section-kicker">Propuesta de valor</p>
+          <h2 id="valor-title">Servicio Cercano y Soluciones Integrales</h2>
+        </div>
+
+        <div class="value-card reveal">
+          <h3>Servicio Cercano</h3>
+          <p>
+            Atención personalizada y directa con profesionales dedicados a cada cliente. Comunicación constante y accesible. Relación de confianza a largo plazo basada en el conocimiento profundo de su negocio y necesidades específicas.
+          </p>
+        </div>
+
+        <div class="value-card reveal">
+          <h3>Soluciones Integrales</h3>
+          <p>
+            Servicios adaptados a cada cliente con orientación a resultados y mejora continua. Uso de tecnología avanzada para máxima eficiencia. Asesoramiento integral que cubre todas las áreas: fiscal, laboral, contable y jurídica bajo un mismo equipo.
+          </p>
+        </div>
+
+        <div class="image-panel image-panel-wide reveal">
+          <img
+            class="deferred-image"
+            src="assets/images/pasillo-escalera.webp"
+            width="1050"
+            height="1400"
+            alt="Instalaciones de MBM Asesores"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section deferred-section" id="servicios" aria-labelledby="servicios-title">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Asesoría laboral · fiscal · contable · servicios jurídicos</p>
+          <h2 id="servicios-title">Soluciones integrales en asesoría fiscal, laboral, contable y jurídica</h2>
+        </div>
+
+        <div class="services-layout">
+          <article class="service-card service-card-large reveal">
+            <h3>ASESORÍA LABORAL</h3>
+            <p>Ofrecemos un servicio integral de asesoría laboral para empresas y autónomos:</p>
+            <ul>
+              <li>Gestión completa de nóminas y seguros sociales</li>
+              <li>Elaboración y revisión de contratos de trabajo</li>
+              <li>Gestión de recursos humanos y relaciones laborales</li>
+              <li>Cumplimiento normativo y prevención de riesgos</li>
+              <li>Representación ante inspecciones de trabajo</li>
+              <li>Tramitación de altas, bajas y variaciones en Seguridad Social</li>
+            </ul>
+            <p>Garantizamos tranquilidad y cumplimiento legal para su empresa.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <h3>ASESORÍA FISCAL</h3>
+            <p>
+              Ofrecemos servicios especializados en planificación fiscal estratégica, elaboración y presentación de declaraciones tributarias, y optimización de la carga impositiva para empresas y particulares.
+            </p>
+            <p>
+              Nuestro equipo experto garantiza el cumplimiento normativo con Hacienda, minimizando riesgos fiscales y maximizando los beneficios legales disponibles para su negocio.
+            </p>
+            <p>Confíe en MBM Asesores para una gestión fiscal eficiente y personalizada.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <h3>ASESORÍA CONTABLE</h3>
+            <p>Ofrecemos servicios contables integrales para optimizar la gestión financiera de su empresa:</p>
+            <ul>
+              <li>Gestión completa de contabilidad empresarial</li>
+              <li>Elaboración y mantenimiento de libros oficiales</li>
+              <li>Informes financieros periódicos y análisis de resultados</li>
+              <li>Auditorías internas y control de gestión</li>
+              <li>Asesoramiento para la toma de decisiones empresariales</li>
+              <li>Cumplimiento normativo y presentación de cuentas anuales</li>
+            </ul>
+            <p>Le ayudamos a mantener sus finanzas en orden para que pueda centrarse en hacer crecer su negocio.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <h3>SERVICIOS JURÍDICOS</h3>
+            <p>Nuestro equipo jurídico ofrece asesoramiento integral en las principales áreas del derecho:</p>
+            <ul>
+              <li>Derecho Civil: contratos, reclamaciones, herencias y sucesiones</li>
+              <li>Derecho Mercantil: constitución de sociedades, fusiones y operaciones empresariales</li>
+              <li>Derecho Laboral: despidos, conflictos laborales y negociación colectiva</li>
+              <li>Defensa Jurídica: representación legal y resolución de conflictos</li>
+            </ul>
+            <p>Protegemos sus intereses con rigor profesional y compromiso absoluto.</p>
+          </article>
+        </div>
+
+        <div class="service-image reveal">
+          <img
+            class="deferred-image"
+            src="assets/images/pasillo-entrada.webp"
+            width="1050"
+            height="1400"
+            alt="Pasillo interior de MBM Asesores"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section deferred-section" id="contacto" aria-labelledby="contacto-title">
+      <div class="section-inner contact-layout">
+        <div class="contact-copy reveal">
+          <p class="section-kicker">Contacto</p>
+          <h2 id="contacto-title">MBM ASESORES</h2>
+          <address>
+            <span>Av. Ejército 73, Arganda del Rey, Madrid 28500</span>
+            <a href="mailto:david@mbm2000.com">david@mbm2000.com</a>
+            <a href="tel:+34918703131">Teléfono: 91 870 31 31</a>
+          </address>
+        </div>
+
+        <div class="schedule reveal">
+          <h3>Horario de Atención:</h3>
+          <p>Lunes a Viernes: 9:00 - 19:30</p>
+          <p>Sábado y Domingo: Cerrado</p>
+        </div>
+
+        <div class="contact-photo reveal">
+          <img
+            class="deferred-image"
+            src="assets/images/fachada-directa.webp"
+            width="808"
+            height="1024"
+            alt="Fachada de MBM Asesores"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 WebMuestra. Proyecto de prueba.</p>
+    <p>MBM ASESORES</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
