@@ -34,35 +34,33 @@
 
   <main id="inicio">
     <section class="hero" aria-labelledby="hero-title">
-      <img
-        class="hero-image"
-        src="assets/images/fachada-principal.webp"
-        width="1448"
-        height="1086"
-        alt="Fachada de MBM Asesores"
-        fetchpriority="high"
-        decoding="async"
-      />
+      <picture class="hero-picture">
+        <source media="(max-width: 760px)" srcset="assets/images/fachada-directa.webp" />
+        <img
+          class="hero-image"
+          src="assets/images/fachada-principal.webp"
+          width="1448"
+          height="1086"
+          alt="Fachada de MBM Asesores"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">Para PYMES y Autónomos</p>
         <h1 id="hero-title"><span>MBM</span> <span>ASESORES</span></h1>
         <p class="hero-subtitle">ESTRATEGIA Y CONFIANZA PARA TU EMPRESA</p>
-        <div class="hero-actions" aria-label="Accesos principales">
-          <a class="button button-primary" href="#propuesta">Propuesta de Valor</a>
-          <a class="button button-secondary" href="#contacto">Contacto</a>
-        </div>
       </div>
     </section>
 
     <section class="section intro-section deferred-section" id="quienes-somos" aria-labelledby="quienes-title">
       <div class="section-inner split-layout">
         <div class="copy-block reveal">
-          <p class="section-kicker">Quiénes somos</p>
-          <h2 id="quienes-title">MBM Asesores cuenta con más de dos décadas de experiencia</h2>
+          <h2 id="quienes-title">QUIÉNES SOMOS</h2>
           <div class="rich-text">
             <p>
-              MBM Asesores cuenta con más de dos décadas de experiencia ofreciendo soluciones integrales en asesoría fiscal, laboral, contable y jurídica. Nuestra misión es acompañar a empresas y particulares en cada etapa de su desarrollo, garantizando un servicio cercano, profesional y adaptado a sus necesidades específicas.
+              MBM Asesores cuenta con 3 décadas de experiencia ofreciendo soluciones integrales en asesoría fiscal, laboral, contable y jurídica. Nuestra misión es acompañar a empresas y particulares en cada etapa de su desarrollo, garantizando un servicio cercano, profesional y adaptado a sus necesidades específicas.
             </p>
             <p>
               Nos distingue nuestro compromiso inquebrantable con la calidad y la atención personalizada. Cada cliente es único, y por ello dedicamos tiempo a comprender sus objetivos para ofrecer las mejores soluciones.
@@ -86,7 +84,6 @@
     <section class="section pillars-section deferred-section" aria-labelledby="valores-title">
       <div class="section-inner">
         <div class="section-heading reveal">
-          <p class="section-kicker">PROFESIONALIDAD CONFIANZA CERCANÍA</p>
           <h2 id="valores-title">Compromiso absoluto con la excelencia en cada servicio</h2>
         </div>
 
@@ -115,22 +112,13 @@
       </div>
     </section>
 
-    <section class="photo-band deferred-section" aria-label="MBM Asesores">
+    <section class="photo-band photo-band-single deferred-section" aria-label="MBM Asesores">
       <img
         class="deferred-image reveal"
         src="assets/images/recepcion.webp"
         width="1448"
         height="1086"
         alt="Recepcion de MBM Asesores"
-        loading="lazy"
-        decoding="async"
-      />
-      <img
-        class="deferred-image reveal"
-        src="assets/images/fachada-exterior.webp"
-        width="1448"
-        height="1086"
-        alt="Exterior de MBM Asesores"
         loading="lazy"
         decoding="async"
       />
@@ -179,7 +167,7 @@
         </div>
 
         <div class="services-layout">
-          <article class="service-card service-card-large reveal">
+          <article class="service-card service-card-large service-card-laboral reveal">
             <h3>ASESORÍA LABORAL</h3>
             <p>Ofrecemos un servicio integral de asesoría laboral para empresas y autónomos:</p>
             <ul>
@@ -193,7 +181,7 @@
             <p>Garantizamos tranquilidad y cumplimiento legal para su empresa.</p>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card service-card-fiscal reveal">
             <h3>ASESORÍA FISCAL</h3>
             <p>
               Ofrecemos servicios especializados en planificación fiscal estratégica, elaboración y presentación de declaraciones tributarias, y optimización de la carga impositiva para empresas y particulares.
@@ -204,7 +192,7 @@
             <p>Confíe en MBM Asesores para una gestión fiscal eficiente y personalizada.</p>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card service-card-contable reveal">
             <h3>ASESORÍA CONTABLE</h3>
             <p>Ofrecemos servicios contables integrales para optimizar la gestión financiera de su empresa:</p>
             <ul>
@@ -218,7 +206,7 @@
             <p>Le ayudamos a mantener sus finanzas en orden para que pueda centrarse en hacer crecer su negocio.</p>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card service-card-accent service-card-juridicos reveal">
             <h3>SERVICIOS JURÍDICOS</h3>
             <p>Nuestro equipo jurídico ofrece asesoramiento integral en las principales áreas del derecho:</p>
             <ul>
@@ -238,7 +226,6 @@
             width="1050"
             height="1400"
             alt="Pasillo interior de MBM Asesores"
-            loading="lazy"
             decoding="async"
           />
         </div>
@@ -259,7 +246,7 @@
 
         <div class="schedule reveal">
           <h3>Horario de Atención:</h3>
-          <p>Lunes a Viernes: 9:00 - 19:30</p>
+          <p class="hours">Lunes a Viernes: 9:00 - 14:00 y 16:30 - 19:30</p>
           <p>Sábado y Domingo: Cerrado</p>
         </div>
 

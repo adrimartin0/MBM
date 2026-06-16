@@ -141,27 +141,31 @@ h3 {
 
 .hero {
   position: relative;
-  min-height: calc(88svh - 74px);
+  min-height: calc(86svh - 74px);
   display: grid;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
   background: var(--wine-deep);
 }
 
-.hero-image {
+.hero-picture {
   position: absolute;
   inset: 0;
+}
+
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 58%;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(42, 7, 21, 0.86) 0%, rgba(42, 7, 21, 0.64) 44%, rgba(42, 7, 21, 0.18) 100%),
-    linear-gradient(0deg, rgba(42, 7, 21, 0.56), rgba(42, 7, 21, 0.08));
+    linear-gradient(90deg, rgba(42, 7, 21, 0.92) 0%, rgba(42, 7, 21, 0.78) 38%, rgba(42, 7, 21, 0.42) 67%, rgba(42, 7, 21, 0.2) 100%),
+    linear-gradient(0deg, rgba(42, 7, 21, 0.34), rgba(42, 7, 21, 0.08));
 }
 
 .hero-content {
@@ -169,7 +173,7 @@ h3 {
   z-index: 1;
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 92px 0 80px;
+  padding: 116px 0 96px;
   color: var(--white);
 }
 
@@ -202,7 +206,7 @@ h1 span {
 
 .hero-subtitle {
   max-width: 720px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
   font-size: 1.35rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.9);
@@ -248,6 +252,13 @@ h1 span {
 
 .section {
   padding: 92px 0;
+}
+
+#quienes-somos,
+#propuesta,
+#servicios,
+#contacto {
+  scroll-margin-top: 88px;
 }
 
 .section-inner {
@@ -322,6 +333,19 @@ address {
 .section-heading {
   max-width: 860px;
   margin-bottom: 34px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.section-heading::before {
+  position: absolute;
+  top: 6px;
+  bottom: 8px;
+  left: 0;
+  width: 4px;
+  border-radius: 8px;
+  background: var(--wine);
+  content: "";
 }
 
 .pillar-grid {
@@ -346,14 +370,18 @@ address {
 
 .photo-band {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: 460px;
   background: var(--wine-deep);
 }
 
+.photo-band-single {
+  grid-template-columns: 1fr;
+}
+
 .photo-band img {
   aspect-ratio: 4 / 3;
-  min-height: 460px;
+  min-height: 500px;
+  object-position: center;
 }
 
 .value-section {
@@ -399,14 +427,18 @@ address {
   padding: 30px;
 }
 
-.service-card-large {
+.service-card-large,
+.service-card-accent {
   background: var(--wine);
   color: var(--white);
 }
 
 .service-card-large h3,
 .service-card-large p,
-.service-card-large li {
+.service-card-large li,
+.service-card-accent h3,
+.service-card-accent p,
+.service-card-accent li {
   color: var(--white);
 }
 
@@ -414,7 +446,8 @@ address {
   color: var(--wine);
 }
 
-.service-card-large h3 {
+.service-card-large h3,
+.service-card-accent h3 {
   color: var(--white);
 }
 
@@ -428,12 +461,20 @@ address {
 }
 
 .service-image {
-  height: 420px;
-  margin-top: 18px;
+  width: min(680px, 100%);
+  height: auto;
+  aspect-ratio: 3 / 4;
+  margin: 30px auto 0;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: var(--shadow);
   background: var(--wine-soft);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .contact-section {
@@ -444,9 +485,9 @@ address {
 
 .contact-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.72fr) minmax(220px, 0.58fr);
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr) minmax(220px, 0.58fr);
   gap: 22px;
-  align-items: stretch;
+  align-items: center;
 }
 
 .contact-copy h2,
@@ -486,8 +527,12 @@ address a:focus-visible {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.schedule .hours {
+  white-space: nowrap;
+}
+
 .contact-photo {
-  min-height: 320px;
+  height: 320px;
   overflow: hidden;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.07);
@@ -601,10 +646,14 @@ address a:focus-visible {
     min-height: calc(82svh - 66px);
   }
 
+  .hero-image {
+    object-position: center center;
+  }
+
   .hero-overlay {
     background:
-      linear-gradient(90deg, rgba(42, 7, 21, 0.88), rgba(42, 7, 21, 0.48)),
-      linear-gradient(0deg, rgba(42, 7, 21, 0.72), rgba(42, 7, 21, 0.12));
+      linear-gradient(90deg, rgba(42, 7, 21, 0.86), rgba(42, 7, 21, 0.46)),
+      linear-gradient(0deg, rgba(42, 7, 21, 0.7), rgba(42, 7, 21, 0.12));
   }
 
   .hero-content {
@@ -632,6 +681,13 @@ address a:focus-visible {
     padding: 64px 0;
   }
 
+  #quienes-somos,
+  #propuesta,
+  #servicios,
+  #contacto {
+    scroll-margin-top: 78px;
+  }
+
   .section-inner {
     width: min(100% - 28px, 1180px);
   }
@@ -656,12 +712,36 @@ address a:focus-visible {
     padding: 22px;
   }
 
+  .service-card-laboral {
+    order: 1;
+  }
+
+  .service-card-fiscal {
+    order: 2;
+  }
+
+  .service-card-juridicos {
+    order: 3;
+  }
+
+  .service-card-contable {
+    order: 4;
+  }
+
   .service-image {
-    height: 360px;
+    width: 100%;
   }
 
   .contact-section {
     padding: 72px 0;
+  }
+
+  .schedule .hours {
+    white-space: normal;
+  }
+
+  .contact-photo {
+    height: auto;
   }
 }
 
