@@ -169,6 +169,7 @@ h3 {
 }
 
 .hero-image {
+  display: none;
   position: absolute;
   top: 50%;
   right: max(30px, calc((100vw - 1180px) / 2));
@@ -703,6 +704,7 @@ address a:focus-visible {
   }
 
   .hero-image {
+    display: block;
     inset: 0;
     z-index: auto;
     width: 100%;
