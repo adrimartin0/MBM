@@ -445,6 +445,7 @@ address {
 }
 
 .services-section {
+  padding-bottom: 48px;
   background: var(--surface);
 }
 
@@ -802,6 +803,10 @@ address a:focus-visible {
 
   .contact-section {
     padding: 72px 0;
+  }
+
+  .services-section {
+    padding-bottom: 40px;
   }
 
   .schedule .hours {
